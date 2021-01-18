@@ -1,0 +1,22 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "Message",
+      "field": "createdAt",
+      "type": "String"
+    },
+    {
+      "tag": "DeleteDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Message",
+          "field": "createdAt"
+        },
+        "directive": "default"
+      }
+    }
+  ]
+}

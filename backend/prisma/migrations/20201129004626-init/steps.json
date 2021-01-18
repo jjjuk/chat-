@@ -1,0 +1,49 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "User",
+      "field": "color",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "User",
+      "field": "password",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "User",
+      "field": "typing",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "User",
+      "field": "online",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Model",
+          "model": "User",
+          "arguments": [
+            {
+              "name": "",
+              "value": "[name, password]"
+            },
+            {
+              "name": "name",
+              "value": "\"auth\""
+            }
+          ]
+        },
+        "directive": "unique"
+      }
+    }
+  ]
+}
